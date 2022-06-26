@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mrecho123.github.io</id>
     <title>NSS</title>
-    <updated>2022-06-26T21:04:31.039Z</updated>
+    <updated>2022-06-26T21:05:23.903Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mrecho123.github.io"/>
     <link rel="self" href="https://mrecho123.github.io/atom.xml"/>
@@ -15,7 +15,7 @@
         <id>https://mrecho123.github.io/post/what-is-mathematics/</id>
         <link href="https://mrecho123.github.io/post/what-is-mathematics/">
         </link>
-        <updated>2022-06-26T05:57:23.000Z</updated>
+        <updated>2022-06-25T22:57:23.000Z</updated>
         <summary type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://mrecho123.github.io/post-images/1656277359908.png" alt="" loading="lazy"></figure>
 ]]></summary>
         <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://mrecho123.github.io/post-images/1656277359908.png" alt="" loading="lazy"></figure>
