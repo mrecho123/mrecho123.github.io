@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>NSS</title>
+<title>what is a bug hunter | NSS</title>
 <meta name="description" content="Mrecho">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -15,6 +15,12 @@
 <link rel="stylesheet" href="https://mrecho123.github.io/styles/main.css">
 
 
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
@@ -23,6 +29,7 @@
 
   </head>
   <body>
+  
     <nav class="navbar border fixed split-nav">
   <div class="nav-brand">
     <h3><a href="https://mrecho123.github.io">NSS</a></h3>
@@ -76,86 +83,84 @@
   </div>
 </nav>
 
-
     <div id="top" class="row site">
       <div class="sm-12 md-8 col">
         <div class="paper">
+          <article class="article">
+            <h1>what is a bug hunter</h1>
+            <p class="article-meta">
+              2022-06-26
+              
+            </p>
+            
+            <div class="post-content">
+              <p><img src="https://mrecho123.github.io/post-images/1656278927497.png" alt="" loading="lazy"><br>
+<span style="background-color: #C6BF9C;">a bunch of security reaserches that test websites looking for errors and bugs that can be dangerous for users ; and for protecting users the conpany offer bounties </span></p>
+<h2 id="bug-hunting-sites">bug hunting sites</h2>
+<p>hackerone<br>
+bugcrowd<br>
+intigriti<br>
+disclose.io</p>
+<h2 id="methodologies">Methodologies</h2>
+<h3 id="xss">XSS</h3>
+<p>Does the page functionality display something to the users?<br>
+Input Vectors:</p>
+<ul>
+<li>Customizable Themes &amp; Profiles via CSS</li>
+<li>Event or meeting names</li>
+<li>URI based</li>
+<li>Imported from a 3rd party (think Facebook integration)</li>
+<li>JSON POST Values (check returning content type)</li>
+<li>File Upload names</li>
+<li>Uploaded files (swf, HTML, ++)</li>
+<li>Custom Error pages</li>
+<li>fake params - ?realparam=1&amp;foo=bar’+alert(/XSS/)+’</li>
+<li>Login and Forgot password forms</li>
+</ul>
+<h3 id="sqli">SQLI</h3>
+<p>Does the page look like it might need to call on stored data?<br>
+discovery payloads : SLEEP(1) /<em>‘ or SLEEP(1) or ‘“ or SLEEP(1) or “</em>/<br>
+<a href="https://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet">cheat sheet </a></p>
+<h3 id="app-functionality">App functionality</h3>
+<p>User priv</p>
+<p>• Add user function<br>
+• Delete user function<br>
+• start project / campaign / etc function<br>
+• change account info (pass, CC, etc) function<br>
+• customer analytics view<br>
+• payment processing view<br>
+• any view with PIIInsecure direct object references<br>
+<strong>IDORs are common place in bounties, and hard to catch with scanners ;use manual testing and burp.</strong></p>
+<p><span style="background-color: #C6BF9C;">and more ..., if have any questions about this field or u want to dig any welcome to my discord sever <a href="https://discord.gg/UvSWJvret5">NetworkSquad</a></span></p>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
           
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://mrecho123.github.io/post/what-is-a-bug-hunter-aka-white-hat-hackers/">what is a bug hunter</a>
-    </h2>
-    <p class="article-meta">
-      2022-06-26
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://mrecho123.github.io/post/what-is-a-bug-hunter-aka-white-hat-hackers/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://mrecho123.github.io/post/what-is-mathematics/">what is mathematics</a>
-    </h2>
-    <p class="article-meta">
-      2022-06-25
-      
-    </p>
-    <p class="text-lead">
-      <figure data-type="image" tabindex="1"><img src="https://mrecho123.github.io/post-images/1656277359908.png" alt="" loading="lazy"></figure>
-
-    </p>
-    <div class="row">
-      <a href="https://mrecho123.github.io/post/what-is-mathematics/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-  <article class="article">
-    <h2 class="article-title">
-      <a href="https://mrecho123.github.io/post/hello-world/">Hello world </a>
-    </h2>
-    <p class="article-meta">
-      1929-10-24
-      
-        <a href="https://mrecho123.github.io/tag/wpMBCTwVw/" class="badge success">
-          Firstpost
-        </a>
-      
-    </p>
-    <p class="text-lead">
-      
-    </p>
-    <div class="row">
-      <a href="https://mrecho123.github.io/post/hello-world/" class="readmore-link">
-        <button>
-          Read More
-        </button>
-      </a>
-    </div>
-  </article>
-
-
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://mrecho123.github.io/post/what-is-mathematics/">
+                <h3 class="post-title">
+                  what is mathematics
+                </h3>
+              </a>
+            </div>
+          
         </div>
         
-        <div class="row flex-edges">
-  
-  
-</div>
+          
+            <div class="paper" data-aos="fade-in">
+              <div id="gitalk-container"></div>
+            </div>
+          
 
+          
+        
       </div>
-      
+
       <div class="sm-12 md-4 col sidebar">
   <div class="paper info-container">
     <img src="https://mrecho123.github.io/images/avatar.png?v=1656279140236" class="no-responsive avatar">
@@ -214,7 +219,7 @@
     </div>
     <div class="row">
       
-        <a href="https://mrecho123.github.io/tag/wpMBCTwVw/" class="badge warning">
+        <a href="https://mrecho123.github.io/tag/wpMBCTwVw/" class="badge secondary">
           Firstpost
         </a>
       
@@ -225,7 +230,9 @@
   </div>
 </div>
 
+
     </div>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 <script type="application/javascript">
@@ -235,6 +242,29 @@ AOS.init();
 hljs.initHighlightingOnLoad()
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'e0f5440468948fd7a048',
+        clientSecret: 'e7f6ee5cabd5203523d139a8b8b602f47f4e0cc6',
+        repo: 'mrecho123.github.io',
+        owner: 'mrecho123',
+        admin: ['mrecho123'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 

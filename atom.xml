@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mrecho123.github.io</id>
     <title>NSS</title>
-    <updated>2022-06-26T21:05:23.903Z</updated>
+    <updated>2022-06-26T21:32:30.199Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mrecho123.github.io"/>
     <link rel="self" href="https://mrecho123.github.io/atom.xml"/>
@@ -10,6 +10,52 @@
     <logo>https://mrecho123.github.io/images/avatar.png</logo>
     <icon>https://mrecho123.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, NSS</rights>
+    <entry>
+        <title type="html"><![CDATA[what is a bug hunter]]></title>
+        <id>https://mrecho123.github.io/post/what-is-a-bug-hunter-aka-white-hat-hackers/</id>
+        <link href="https://mrecho123.github.io/post/what-is-a-bug-hunter-aka-white-hat-hackers/">
+        </link>
+        <updated>2022-06-26T07:10:49.000Z</updated>
+        <content type="html"><![CDATA[<p><img src="https://mrecho123.github.io/post-images/1656278927497.png" alt="" loading="lazy"><br>
+<span style="background-color: #C6BF9C;">a bunch of security reaserches that test websites looking for errors and bugs that can be dangerous for users ; and for protecting users the conpany offer bounties </span></p>
+<h2 id="bug-hunting-sites">bug hunting sites</h2>
+<p>hackerone<br>
+bugcrowd<br>
+intigriti<br>
+disclose.io</p>
+<h2 id="methodologies">Methodologies</h2>
+<h3 id="xss">XSS</h3>
+<p>Does the page functionality display something to the users?<br>
+Input Vectors:</p>
+<ul>
+<li>Customizable Themes &amp; Profiles via CSS</li>
+<li>Event or meeting names</li>
+<li>URI based</li>
+<li>Imported from a 3rd party (think Facebook integration)</li>
+<li>JSON POST Values (check returning content type)</li>
+<li>File Upload names</li>
+<li>Uploaded files (swf, HTML, ++)</li>
+<li>Custom Error pages</li>
+<li>fake params - ?realparam=1&amp;foo=bar’+alert(/XSS/)+’</li>
+<li>Login and Forgot password forms</li>
+</ul>
+<h3 id="sqli">SQLI</h3>
+<p>Does the page look like it might need to call on stored data?<br>
+discovery payloads : SLEEP(1) /<em>‘ or SLEEP(1) or ‘“ or SLEEP(1) or “</em>/<br>
+<a href="https://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet">cheat sheet </a></p>
+<h3 id="app-functionality">App functionality</h3>
+<p>User priv</p>
+<p>• Add user function<br>
+• Delete user function<br>
+• start project / campaign / etc function<br>
+• change account info (pass, CC, etc) function<br>
+• customer analytics view<br>
+• payment processing view<br>
+• any view with PIIInsecure direct object references<br>
+<strong>IDORs are common place in bounties, and hard to catch with scanners ;use manual testing and burp.</strong></p>
+<p><span style="background-color: #C6BF9C;">and more ..., if have any questions about this field or u want to dig any welcome to my discord sever <a href="https://discord.gg/UvSWJvret5">NetworkSquad</a></span></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[what is mathematics]]></title>
         <id>https://mrecho123.github.io/post/what-is-mathematics/</id>
