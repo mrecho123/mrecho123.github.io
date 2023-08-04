@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mrecho123.github.io</id>
     <title>NSS</title>
-    <updated>2023-08-04T23:37:06.104Z</updated>
+    <updated>2023-08-04T23:44:52.707Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mrecho123.github.io"/>
     <link rel="self" href="https://mrecho123.github.io/atom.xml"/>
@@ -18,8 +18,8 @@
         <updated>2023-08-02T20:21:54.000Z</updated>
         <content type="html"><![CDATA[<p><strong>Hello again , The past weekend I played TFC CTF it was fun 😃 , here is the interesting challenges that I solved in the web category ; enjoy 👌</strong></p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3887216"><label class="task-list-item-label" for="task-item-3887216"> Baby ducky notes and the part 2 (revenge)</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6679186"><label class="task-list-item-label" for="task-item-6679186"> MCTREE</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9311514"><label class="task-list-item-label" for="task-item-9311514"> Baby ducky notes and the part 2 (revenge)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-941278"><label class="task-list-item-label" for="task-item-941278"> MCTREE</label></li>
 </ul>
 <hr>
 <h2 id="baby-ducky-notes-part-1-2">Baby ducky notes Part 1 &amp; 2</h2>
@@ -103,9 +103,8 @@ server :
         <id>https://mrecho123.github.io/post/nahamcon-ctf-writeup-2021/</id>
         <link href="https://mrecho123.github.io/post/nahamcon-ctf-writeup-2021/">
         </link>
-        <updated>2021-03-13T03:17:07.000Z</updated>
-        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*W-_7lDYsjx_LEwi92McTeQ.png" alt="img" loading="lazy"></figure>
-<p><strong>Hello, I m Mr_echo, I m played Nahamcon CTF 2021 this weekend, and I'm gonna write some interesting challenges that I solved 👌.~Enjoy</strong></p>
+        <updated>2021-03-12T20:17:07.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>Hello, I m Mr_echo, I m played Nahamcon CTF 2021 this weekend, and I'm gonna write some interesting challenges that I solved 👌.~Enjoy</strong></p>
 <h2 id="1-homeward-bound-web-50-p">1. Homeward Bound [WEB 50 p]</h2>
 <h3 id="objective"><strong>Objective</strong>:</h3>
 <p><strong>-bypass 404</strong></p>
@@ -137,7 +136,7 @@ server :
 <p>Let's take a look at the web app</p>
 <p><img src="https://cdn-images-1.medium.com/max/2446/1*nsknDSpmgwsBdttm2qdq7w.png" alt="*sign in and sign up page" loading="lazy">*<em>sign in and sign up page</em></p>
 <p>Let's create a test user</p>
-<figure data-type="image" tabindex="2"><img src="https://cdn-images-1.medium.com/max/2000/1*H-Nlrs16-i04O15Ghi-9-A.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://cdn-images-1.medium.com/max/2000/1*H-Nlrs16-i04O15Ghi-9-A.png" alt="" loading="lazy"></figure>
 <p>Give us this QR code</p>
 <p><img src="https://cdn-images-1.medium.com/max/2000/1*8Kmutw53bI4MIkaNHqTojA.png" alt="otp" loading="lazy"><em>otp</em></p>
 <ul>
@@ -163,11 +162,11 @@ server :
 <ul>
 <li>trying to reset test user pass : [test:<a href="mailto:test@cc.com">test@cc.com</a>:qerty123456] the new pass reset : hacked12345678</li>
 </ul>
-<figure data-type="image" tabindex="3"><img src="https://cdn-images-1.medium.com/max/2000/1*VmTGF6xOhbjNxW2PBcmlNg.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://cdn-images-1.medium.com/max/2000/1*VmTGF6xOhbjNxW2PBcmlNg.png" alt="" loading="lazy"></figure>
 <ul>
 <li>trying to reset the password of the admin</li>
 </ul>
-<figure data-type="image" tabindex="4"><img src="https://cdn-images-1.medium.com/max/2000/1*KFnsN7Tvk1mmPSBLlVjbNg.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://cdn-images-1.medium.com/max/2000/1*KFnsN7Tvk1mmPSBLlVjbNg.png" alt="" loading="lazy"></figure>
 <ul>
 <li>
 <p>turn out there is an injection just add “;” [your_email;admin@congon4tor.me]</p>
@@ -219,7 +218,7 @@ server :
 <li>user: admin ; pass : <code>*)([@skdnaj238374834](http://twitter.com/skdnaj238374834)**__**=</code></li>
 </ul>
 <p>Login as admin :</p>
-<figure data-type="image" tabindex="5"><img src="https://cdn-images-1.medium.com/max/2962/1*bEzoIxuzuXbTuT5KlRj34Q.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://cdn-images-1.medium.com/max/2962/1*bEzoIxuzuXbTuT5KlRj34Q.png" alt="" loading="lazy"></figure>
 <p>Nothing interesting; no admin panel 😦(</p>
 <p>so let's move on to the source code</p>
 <p>In /app/app.py</p>
@@ -231,7 +230,7 @@ server :
 <p>so we go to /debug and set id cookie to 1</p>
 </li>
 </ul>
-<figure data-type="image" tabindex="6"><img src="https://cdn-images-1.medium.com/max/2940/1*jdAaMI_gvJeqpL0bFPoGQA.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://cdn-images-1.medium.com/max/2940/1*jdAaMI_gvJeqpL0bFPoGQA.png" alt="" loading="lazy"></figure>
 <ul>
 <li>
 <p>code = request.form.get(“code”, “<h1>Safe Debug</h1>”)<br>
@@ -294,7 +293,7 @@ return render_template_string(code)</p>
 <p>found stored password</p>
 <p><img src="https://cdn-images-1.medium.com/max/2000/1*Wo8p04_yeYXYkepiwDc1oQ.png" alt="yay" loading="lazy"><em>yay</em></p>
 <p>we got the flag 😃)</p>
-<figure data-type="image" tabindex="7"><img src="https://cdn-images-1.medium.com/max/2000/1*ceYCCx23VyjF9XdQrbNyjQ.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://cdn-images-1.medium.com/max/2000/1*ceYCCx23VyjF9XdQrbNyjQ.png" alt="" loading="lazy"></figure>
 <p>BTW THIS IS MY FIRST WRITEUP 😃) LIKE AND FOLLOW</p>
 ]]></content>
     </entry>

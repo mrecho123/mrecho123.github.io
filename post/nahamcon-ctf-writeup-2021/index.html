@@ -7,7 +7,7 @@
 <meta name="description" content="Mrecho">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="shortcut icon" href="https://mrecho123.github.io/favicon.ico?v=1691192223262">
+<link rel="shortcut icon" href="https://mrecho123.github.io/favicon.ico?v=1691192690444">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
@@ -89,7 +89,7 @@
           <article class="article">
             <h1>NahamCon CTF Writeup 2021 🐱‍💻</h1>
             <p class="article-meta">
-              2021-03-13
+              2021-03-12
               
                 <a href="https://mrecho123.github.io/tag/VnWuWwEsW/" class="badge warning">
                   CTF
@@ -100,8 +100,7 @@
               <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*W-_7lDYsjx_LEwi92McTeQ.png" alt="NahamCon CTF Writeup 2021 🐱‍💻">
             
             <div class="post-content">
-              <figure data-type="image" tabindex="1"><img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*W-_7lDYsjx_LEwi92McTeQ.png" alt="img" loading="lazy"></figure>
-<p><strong>Hello, I m Mr_echo, I m played Nahamcon CTF 2021 this weekend, and I'm gonna write some interesting challenges that I solved 👌.~Enjoy</strong></p>
+              <p><strong>Hello, I m Mr_echo, I m played Nahamcon CTF 2021 this weekend, and I'm gonna write some interesting challenges that I solved 👌.~Enjoy</strong></p>
 <h2 id="1-homeward-bound-web-50-p">1. Homeward Bound [WEB 50 p]</h2>
 <h3 id="objective"><strong>Objective</strong>:</h3>
 <p><strong>-bypass 404</strong></p>
@@ -133,7 +132,7 @@
 <p>Let's take a look at the web app</p>
 <p><img src="https://cdn-images-1.medium.com/max/2446/1*nsknDSpmgwsBdttm2qdq7w.png" alt="*sign in and sign up page" loading="lazy">*<em>sign in and sign up page</em></p>
 <p>Let's create a test user</p>
-<figure data-type="image" tabindex="2"><img src="https://cdn-images-1.medium.com/max/2000/1*H-Nlrs16-i04O15Ghi-9-A.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://cdn-images-1.medium.com/max/2000/1*H-Nlrs16-i04O15Ghi-9-A.png" alt="" loading="lazy"></figure>
 <p>Give us this QR code</p>
 <p><img src="https://cdn-images-1.medium.com/max/2000/1*8Kmutw53bI4MIkaNHqTojA.png" alt="otp" loading="lazy"><em>otp</em></p>
 <ul>
@@ -159,11 +158,11 @@
 <ul>
 <li>trying to reset test user pass : [test:<a href="mailto:test@cc.com">test@cc.com</a>:qerty123456] the new pass reset : hacked12345678</li>
 </ul>
-<figure data-type="image" tabindex="3"><img src="https://cdn-images-1.medium.com/max/2000/1*VmTGF6xOhbjNxW2PBcmlNg.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://cdn-images-1.medium.com/max/2000/1*VmTGF6xOhbjNxW2PBcmlNg.png" alt="" loading="lazy"></figure>
 <ul>
 <li>trying to reset the password of the admin</li>
 </ul>
-<figure data-type="image" tabindex="4"><img src="https://cdn-images-1.medium.com/max/2000/1*KFnsN7Tvk1mmPSBLlVjbNg.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://cdn-images-1.medium.com/max/2000/1*KFnsN7Tvk1mmPSBLlVjbNg.png" alt="" loading="lazy"></figure>
 <ul>
 <li>
 <p>turn out there is an injection just add “;” [your_email;admin@congon4tor.me]</p>
@@ -215,7 +214,7 @@
 <li>user: admin ; pass : <code>*)([@skdnaj238374834](http://twitter.com/skdnaj238374834)**__**=</code></li>
 </ul>
 <p>Login as admin :</p>
-<figure data-type="image" tabindex="5"><img src="https://cdn-images-1.medium.com/max/2962/1*bEzoIxuzuXbTuT5KlRj34Q.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://cdn-images-1.medium.com/max/2962/1*bEzoIxuzuXbTuT5KlRj34Q.png" alt="" loading="lazy"></figure>
 <p>Nothing interesting; no admin panel 😦(</p>
 <p>so let's move on to the source code</p>
 <p>In /app/app.py</p>
@@ -227,7 +226,7 @@
 <p>so we go to /debug and set id cookie to 1</p>
 </li>
 </ul>
-<figure data-type="image" tabindex="6"><img src="https://cdn-images-1.medium.com/max/2940/1*jdAaMI_gvJeqpL0bFPoGQA.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://cdn-images-1.medium.com/max/2940/1*jdAaMI_gvJeqpL0bFPoGQA.png" alt="" loading="lazy"></figure>
 <ul>
 <li>
 <p>code = request.form.get(“code”, “<h1>Safe Debug</h1>”)<br>
@@ -290,7 +289,7 @@ return render_template_string(code)</p>
 <p>found stored password</p>
 <p><img src="https://cdn-images-1.medium.com/max/2000/1*Wo8p04_yeYXYkepiwDc1oQ.png" alt="yay" loading="lazy"><em>yay</em></p>
 <p>we got the flag 😃)</p>
-<figure data-type="image" tabindex="7"><img src="https://cdn-images-1.medium.com/max/2000/1*ceYCCx23VyjF9XdQrbNyjQ.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://cdn-images-1.medium.com/max/2000/1*ceYCCx23VyjF9XdQrbNyjQ.png" alt="" loading="lazy"></figure>
 <p>BTW THIS IS MY FIRST WRITEUP 😃) LIKE AND FOLLOW</p>
 
             </div>
@@ -312,7 +311,7 @@ return render_template_string(code)</p>
 
       <div class="sm-12 md-4 col sidebar">
   <div class="paper info-container">
-    <img src="https://mrecho123.github.io/images/avatar.png?v=1691192223262" class="no-responsive avatar">
+    <img src="https://mrecho123.github.io/images/avatar.png?v=1691192690444" class="no-responsive avatar">
     <div class="text-muted">Mrecho</div>
     <div class="social-container">
       
