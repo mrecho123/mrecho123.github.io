@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mrecho123.github.io</id>
     <title>NSS</title>
-    <updated>2023-08-04T00:41:31.081Z</updated>
+    <updated>2023-08-04T23:34:46.956Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mrecho123.github.io"/>
     <link rel="self" href="https://mrecho123.github.io/atom.xml"/>
@@ -18,8 +18,8 @@
         <updated>2023-08-03T03:21:54.000Z</updated>
         <content type="html"><![CDATA[<p><strong>Hello again , The past weekend I played TFC CTF it was fun 😃 , here is the interesting challenges that I solved in the web category ; enjoy 👌</strong></p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4268752"><label class="task-list-item-label" for="task-item-4268752"> Baby ducky notes and the part 2 (revenge)</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-981609"><label class="task-list-item-label" for="task-item-981609"> MCTREE</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-527102"><label class="task-list-item-label" for="task-item-527102"> Baby ducky notes and the part 2 (revenge)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7575419"><label class="task-list-item-label" for="task-item-7575419"> MCTREE</label></li>
 </ul>
 <hr>
 <h2 id="baby-ducky-notes-part-1-2">Baby ducky notes Part 1 &amp; 2</h2>
@@ -96,16 +96,6 @@ server :
 </ul>
 <figure data-type="image" tabindex="3"><img src="https://cdn.discordapp.com/attachments/1136817885122154526/1136818055410884708/Pasted_image_20230729122443.png" alt="img" loading="lazy"></figure>
 <p><span style="background-color: #C6BF9C;"> In conclusion : keep better notes when you trying to solve a CTF challenge and try evrything that comes to your mind , and more writeups you read the more ideas you will have , till then C ya 😉 </span></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CVE-2023-001]]></title>
-        <id>https://mrecho123.github.io/post/cve-2023-001/</id>
-        <link href="https://mrecho123.github.io/post/cve-2023-001/">
-        </link>
-        <updated>2023-08-02T05:31:54.000Z</updated>
-        <content type="html"><![CDATA[<p>This is my first CVE that I found in [REDACTED] .<br>
-DOcument stuff</p>
 ]]></content>
     </entry>
     <entry>
