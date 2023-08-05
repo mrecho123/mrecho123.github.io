@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mrecho123.github.io</id>
-    <title>NSS</title>
-    <updated>2023-08-04T23:44:52.707Z</updated>
+    <title></title>
+    <updated>2023-08-05T00:04:36.915Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mrecho123.github.io"/>
     <link rel="self" href="https://mrecho123.github.io/atom.xml"/>
     <subtitle>Mrecho</subtitle>
     <logo>https://mrecho123.github.io/images/avatar.png</logo>
     <icon>https://mrecho123.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2023, NSS</rights>
+    <rights>All rights reserved 2023, </rights>
     <entry>
         <title type="html"><![CDATA[TFC CTF 2023 - web challenges 🐱‍💻]]></title>
         <id>https://mrecho123.github.io/post/tfc-ctf-2023-web-challenges/</id>
@@ -18,8 +18,8 @@
         <updated>2023-08-02T20:21:54.000Z</updated>
         <content type="html"><![CDATA[<p><strong>Hello again , The past weekend I played TFC CTF it was fun 😃 , here is the interesting challenges that I solved in the web category ; enjoy 👌</strong></p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9311514"><label class="task-list-item-label" for="task-item-9311514"> Baby ducky notes and the part 2 (revenge)</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-941278"><label class="task-list-item-label" for="task-item-941278"> MCTREE</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8087064"><label class="task-list-item-label" for="task-item-8087064"> Baby ducky notes and the part 2 (revenge)</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3349159"><label class="task-list-item-label" for="task-item-3349159"> MCTREE</label></li>
 </ul>
 <hr>
 <h2 id="baby-ducky-notes-part-1-2">Baby ducky notes Part 1 &amp; 2</h2>
